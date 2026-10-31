@@ -9,30 +9,35 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
-      home: Scaffold(body: Center(child: Column(
-                            children: [ Text('Hello World!'), 
-                            Text("Welcome to Boréal !!!"),
-                            Container(
-                              margin: EdgeInsets.all(20), 
-                              padding: EdgeInsets.all(16), 
-                              decoration: BoxDecoration( 
-                                color: Colors.redAccent, 
-                                borderRadius: BorderRadius.circular(14),
-                              ),
-                                
-                              child: Column(
-                                children:[
-                                  Text( 'Boîte stylisée avec Container', 
-                                  style: TextStyle(color: Colors.white, fontSize: 18), 
-                                  ), 
-                                Text("Creer par Kenny.",
-                                style: TextStyle(color: Colors.white, fontSize: 18),
-                                ),
-                              ],
-                            ), 
-                          ),
-                          Stack(
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            children: [
+              Text('Hello World!'),
+              Text("Welcome to Boréal !!!"),
+              Container(
+                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.redAccent,
+                  borderRadius: BorderRadius.circular(14),
+                ),
+
+                child: Column(
+                  children: [
+                    Text(
+                      'Boîte stylisée avec Container',
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                    Text(
+                      "Creer par Kenny.",
+                      style: TextStyle(color: Colors.white, fontSize: 18),
+                    ),
+                  ],
+                ),
+              ),
+              Stack(
                 alignment: Alignment.bottomRight,
                 children: [
                   Container(width: 200, height: 200, color: Colors.blue[100]),
@@ -42,11 +47,21 @@ class MainApp extends StatelessWidget {
                     style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                   ),
                 ],
-              ), 
-                        ],
-                      ),
-                    ), 
-                  ),
-                );
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(Icons.home, color: Colors.blue, size: 40),
+                  Icon(Icons.star, color: Colors.amber, size: 40),
+                  Icon(Icons.settings, color: Colors.grey, size: 40),
+                  Icon(Icons.sports_football, color: Colors.black, size: 50),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
