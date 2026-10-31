@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp( MainApp());
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -55,7 +55,22 @@ class MainApp extends StatelessWidget {
                   Icon(Icons.home, color: Colors.blue, size: 40),
                   Icon(Icons.star, color: Colors.amber, size: 40),
                   Icon(Icons.settings, color: Colors.grey, size: 40),
-                  Icon(Icons.sports_football, color: Colors.black, size: 50),
+                  Icon(
+                    Icons.sports_soccer_rounded,
+                    color: Colors.black,
+                    size: 50,
+                  ),
+                  Icon(Icons.gamepad, color: Colors.blueAccent, size: 40),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Text('Titre principal', style: TextStyle(fontSize: 30)),
+                  SizedBox(height: 20),
+                  Text('Sous-titre ou description'),
+                  Icon(Icons.thumb_up, color: Colors.green, size: 40),
                 ],
               ),
             ],
