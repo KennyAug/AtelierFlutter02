@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp( MainApp());
 }
 
 class MainApp extends StatelessWidget {
@@ -9,19 +9,33 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return  MaterialApp(
       home: Scaffold(body: Center(child: Column(
                             children: [ Text('Hello World!'), 
-                            Text("Welcome to Boréal !!!")
-        ],
-      ),
-    ),
-  ),
-);
-}
-
-
-
-
-
+                            Text("Welcome to Boréal !!!"),
+                            Container(
+                              margin: EdgeInsets.all(20), 
+                              padding: EdgeInsets.all(16), 
+                              decoration: BoxDecoration( 
+                                color: Colors.redAccent, 
+                                borderRadius: BorderRadius.circular(14),
+                              ),
+                                
+                              child: Column(
+                                children:[
+                                  Text( 'Boîte stylisée avec Container', 
+                                  style: TextStyle(color: Colors.white, fontSize: 18), 
+                                  ), 
+                                Text("Creer par Kenny.",
+                                style: TextStyle(color: Colors.white, fontSize: 18),
+                                ),
+                              ],
+                            ), 
+                          ),
+                        ],
+                      ),
+                    ), 
+                  ),
+                );
+  }
 }
